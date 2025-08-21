@@ -7,7 +7,7 @@ export default function Hero() {
     return (
         <section
             id="hero"
-            className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white relative overflow-hidden"
+            className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-100 via-gray-200 to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 text-gray-900 dark:text-white relative overflow-hidden transition-colors duration-500"
         >
             <div className="max-w-4xl mx-auto text-center px-6 relative z-10">
                 {/* Animated Intro */}
@@ -21,7 +21,7 @@ export default function Hero() {
                     <motion.span
                         animate={{ textShadow: ["0 0 10px #a855f7", "0 0 20px #9333ea", "0 0 10px #a855f7"] }}
                         transition={{ duration: 3, repeat: Infinity, repeatType: "mirror" }}
-                        className="text-purple-400"
+                        className="text-purple-600 dark:text-purple-400"
                     >
                         Praveen Kumar
                     </motion.span>
@@ -32,7 +32,7 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.4 }}
-                    className="text-xl sm:text-2xl text-gray-300 mb-8 h-10"
+                    className="text-xl sm:text-2xl text-gray-700 dark:text-gray-300 mb-8 h-10"
                 >
                     <ReactTyped
                         strings={[
@@ -56,7 +56,8 @@ export default function Hero() {
                     className="flex flex-wrap justify-center gap-4"
                 >
                     <motion.a
-                        href="/Praveen_kumar_FullStack_Resume.pdf" download="Praveen-Kumar-Resume"
+                        href="/Praveen_kumar_FullStack_Resume.pdf" 
+                        download="Praveen-Kumar-Resume"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
                         className="flex items-center gap-2 bg-purple-500 text-white px-6 py-3 rounded-2xl shadow-lg hover:bg-purple-600 transition"
@@ -70,7 +71,7 @@ export default function Hero() {
                         rel="noopener noreferrer"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
-                        className="flex items-center gap-2 border border-gray-500 px-6 py-3 rounded-2xl text-gray-300 hover:border-purple-400 hover:text-purple-400 transition"
+                        className="flex items-center gap-2 border border-gray-400 dark:border-gray-500 px-6 py-3 rounded-2xl text-gray-900 dark:text-gray-300 hover:border-purple-500 hover:text-purple-500 dark:hover:border-purple-400 dark:hover:text-purple-400 transition"
                     >
                         <FiGithub /> GitHub
                     </motion.a>
@@ -81,7 +82,7 @@ export default function Hero() {
                         rel="noopener noreferrer"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
-                        className="flex items-center gap-2 border border-gray-500 px-6 py-3 rounded-2xl text-gray-300 hover:border-purple-400 hover:text-purple-400 transition"
+                        className="flex items-center gap-2 border border-gray-400 dark:border-gray-500 px-6 py-3 rounded-2xl text-gray-900 dark:text-gray-300 hover:border-purple-500 hover:text-purple-500 dark:hover:border-purple-400 dark:hover:text-purple-400 transition"
                     >
                         <FiLinkedin /> LinkedIn
                     </motion.a>
@@ -92,12 +93,12 @@ export default function Hero() {
             <motion.div
                 animate={{ y: [0, -30, 0] }}
                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute w-[600px] h-[600px] bg-purple-600 rounded-full blur-[180px] top-[-200px] left-[-150px] opacity-30"
+                className="absolute w-[600px] h-[600px] bg-purple-400 dark:bg-purple-600 rounded-full blur-[180px] top-[-200px] left-[-150px] opacity-30"
             />
             <motion.div
                 animate={{ y: [0, 30, 0] }}
                 transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute w-[500px] h-[500px] bg-blue-600 rounded-full blur-[160px] bottom-[-150px] right-[-120px] opacity-30"
+                className="absolute w-[500px] h-[500px] bg-blue-400 dark:bg-blue-600 rounded-full blur-[160px] bottom-[-150px] right-[-120px] opacity-30"
             />
         </section>
     );

@@ -43,7 +43,7 @@ export default function Contact() {
 
 
     return (
-        <section id="contact" className="py-20 px-6 bg-gray-900 text-white">
+        <section id="contact" className="py-20 px-6 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-500">
             <div className="max-w-4xl mx-auto text-center">
                 {/* Heading */}
                 <motion.h2
@@ -54,11 +54,13 @@ export default function Contact() {
                 >
                     Get in Touch
                 </motion.h2>
+
+                {/* Subtitle */}
                 <motion.p
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    className="text-gray-300 mb-12"
+                    className="text-gray-700 dark:text-gray-300 mb-12 transition-colors duration-500"
                 >
                     Have a project or just want to say hi? My inbox is open for all opportunities.
                 </motion.p>
@@ -70,68 +72,38 @@ export default function Contact() {
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.4 }}
-                    className="grid gap-6 bg-gray-800 p-8 rounded-2xl shadow-lg"
+                    className="grid gap-6 bg-gray-200 dark:bg-gray-800 p-8 rounded-2xl shadow-lg transition-colors duration-500"
                 >
                     <input
                         type="text"
                         name="user_name"
                         placeholder="Your Name"
                         required
-                        className="bg-gray-700 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400 transition"
+                        className="bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400 transition-colors duration-300"
                     />
                     <input
                         type="email"
                         name="user_email"
                         placeholder="Your Email"
                         required
-                        className="bg-gray-700 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400 transition"
+                        className="bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400 transition-colors duration-300"
                     />
                     <textarea
                         name="message"
                         placeholder="Your Message"
                         rows="5"
                         required
-                        className="bg-gray-700 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400 transition"
+                        className="bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400 transition-colors duration-300"
                     />
                     <button
                         type="submit"
-                        className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-xl font-semibold shadow-lg transition"
+                        className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-xl font-semibold shadow-lg transition-colors duration-300"
                     >
                         Send Message
                     </button>
                 </motion.form>
-
-                {/* Social Links */}
-                {/* <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="flex justify-center gap-6 mt-10"
-        >
-          <a
-            href="mailto:praveen200317@gmail.com"
-            className="text-cyan-400 hover:text-cyan-200 text-2xl transition"
-          >
-            <FiMail />
-          </a>
-          <a
-            href="https://github.com/PraveenS-dev"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-cyan-400 hover:text-cyan-200 text-2xl transition"
-          >
-            <FiGithub />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/praveen-kumar-b445192ab"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-cyan-400 hover:text-cyan-200 text-2xl transition"
-          >
-            <FiLinkedin />
-          </a>
-        </motion.div> */}
             </div>
         </section>
     );
+
 }
