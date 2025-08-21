@@ -34,6 +34,7 @@ A professional full-stack developer portfolio showcasing projects built with **R
 1. **Clone the repository**
 
 git clone https://github.com/PraveenS-dev/dev-portfolio-2025.git
+
 cd dev-portfolio-2025
 
 Install dependencies
@@ -42,7 +43,9 @@ npm install
 Create a .env file in the root directory:
 
 VITE_EMAILJS_SERVICE_ID=your_service_id
+
 VITE_EMAILJS_TEMPLATE_ID=your_template_id
+
 VITE_EMAILJS_PUBLIC_KEY=your_public_key
 
 📂 Project Structure
@@ -58,4 +61,5 @@ dev-portfolio-2025/
 You can reach me via the contact form on the portfolio or at:
 
 Email: praveen200317@gmail.com
+
 LinkedIn: Praveen Kumar S
