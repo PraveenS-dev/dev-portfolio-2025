@@ -22,11 +22,11 @@ export default function ScrollToTop() {
   return (
     <button
       onClick={scrollToTop}
-      className={`fixed bottom-6 right-6 p-3 rounded-full bg-cyan-500 hover:bg-cyan-600 shadow-lg text-white transition-opacity duration-300 ${
-        visible ? "opacity-100" : "opacity-0 pointer-events-none"
-      }`}
+      className={`fixed bottom-6 right-6 p-3 rounded-full bg-cyan-500 dark:bg-cyan-400 hover:bg-cyan-600 dark:hover:bg-cyan-500 shadow-cyan-500/50 dark:shadow-cyan-400/50 shadow-lg text-white transition-opacity transition-colors duration-300 ${visible ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
     >
       <FiArrowUp className="text-xl" />
     </button>
   );
+
 }

@@ -27,20 +27,20 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section className="py-16 px-6 md:px-12 bg-gray-900 text-white">
+    <section className="py-16 px-6 md:px-12 bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-500">
       {/* Section Title */}
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text"
+        className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text"
       >
         Experience
       </motion.h2>
 
       {/* Timeline */}
-      <div className="relative border-l-2 border-cyan-500/40 max-w-3xl mx-auto">
+      <div className="relative border-l-2 border-cyan-500/40 dark:border-cyan-400/40 max-w-3xl mx-auto">
         {experiences.map((exp, index) => (
           <motion.div
             key={index}
@@ -51,19 +51,19 @@ export default function Experience() {
             className="mb-12 ml-8 group"
           >
             {/* Timeline Icon */}
-            <span className="absolute -left-4 flex items-center justify-center w-9 h-9 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 text-white shadow-md group-hover:scale-110 transition-transform duration-300">
+            <span className="absolute -left-4 flex items-center justify-center w-9 h-9 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-md group-hover:scale-110 transition-transform duration-300">
               <FaBriefcase />
             </span>
 
             {/* Role + Company */}
-            <h3 className="text-xl md:text-2xl font-semibold group-hover:text-cyan-400 transition-colors duration-300">
+            <h3 className="text-xl md:text-2xl font-semibold group-hover:text-cyan-500 dark:group-hover:text-cyan-400 transition-colors duration-300">
               {exp.role}
             </h3>
-            <p className="text-lg text-gray-300">{exp.company}</p>
-            <p className="text-sm text-gray-400 italic">{exp.duration}</p>
+            <p className="text-lg text-gray-700 dark:text-gray-300">{exp.company}</p>
+            <p className="text-sm text-gray-500 dark:text-gray-400 italic">{exp.duration}</p>
 
             {/* Description */}
-            <p className="mt-3 text-gray-300 leading-relaxed">
+            <p className="mt-3 text-gray-700 dark:text-gray-300 leading-relaxed">
               {exp.description}
             </p>
           </motion.div>
@@ -71,4 +71,5 @@ export default function Experience() {
       </div>
     </section>
   );
+
 }
